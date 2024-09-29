@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		CC94AE002CA36A270091567C /* WorkoutWithABuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */; };
-		CC94AE022CA36A270091567C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE012CA36A270091567C /* ContentView.swift */; };
+		CC94AE022CA36A270091567C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE012CA36A270091567C /* MainTabBarController.swift */; };
 		CC94AE042CA36A280091567C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC94AE032CA36A280091567C /* Assets.xcassets */; };
 		CC94AE072CA36A280091567C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC94AE062CA36A280091567C /* Preview Assets.xcassets */; };
 		CC94AE112CA36A280091567C /* WorkoutWithABuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE102CA36A280091567C /* WorkoutWithABuddyTests.swift */; };
 		CC94AE1B2CA36A280091567C /* WorkoutWithABuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE1A2CA36A280091567C /* WorkoutWithABuddyUITests.swift */; };
 		CC94AE1D2CA36A280091567C /* WorkoutWithABuddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE1C2CA36A280091567C /* WorkoutWithABuddyUITestsLaunchTests.swift */; };
+		CC94AE2A2CA36AB40091567C /* ExerciseInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE292CA36AB40091567C /* ExerciseInputViewController.swift */; };
+		CC94AE2E2CA4ED9A0091567C /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE2D2CA4ED9A0091567C /* TimePickerView.swift */; };
+		CC94AE302CA4EFF50091567C /* WeightUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE2F2CA4EFF50091567C /* WeightUnitView.swift */; };
+		CC94AE322CA4F0600091567C /* WeightFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE312CA4F0600091567C /* WeightFieldView.swift */; };
+		CC94AE342CA4F9D90091567C /* WeightStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE332CA4F9D90091567C /* WeightStackViewController.swift */; };
+		CC94AE362CA50E1E0091567C /* ExerciseSaveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE352CA50E1E0091567C /* ExerciseSaveDelegate.swift */; };
+		CC94AE382CA50F440091567C /* ExerciseInputUiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE372CA50F440091567C /* ExerciseInputUiTextField.swift */; };
+		CC94AE3A2CA618730091567C /* PythonDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE392CA618730091567C /* PythonDbService.swift */; };
+		CC94AE3C2CA618BC0091567C /* ExerciseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE3B2CA618BC0091567C /* ExerciseObject.swift */; };
+		CC94AE3F2CA9D5F00091567C /* UsernamePasswordLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE3E2CA9D5F00091567C /* UsernamePasswordLogin.swift */; };
+		CC94AE412CA9D7C80091567C /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE402CA9D7C80091567C /* NewUserView.swift */; };
+		CC94AE432CA9DA5F0091567C /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE422CA9DA5F0091567C /* UserObject.swift */; };
+		CC94AE452CA9DE780091567C /* UserLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE442CA9DE780091567C /* UserLoginService.swift */; };
+		CC94AE492CA9E9E20091567C /* WeekWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */; };
+		CCB8CEE12CA9FE8A00D1BA97 /* WorkoutDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE02CA9FE8A00D1BA97 /* WorkoutDay.swift */; };
+		CCB8CEE32CAA063300D1BA97 /* WorkoutObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE22CAA063300D1BA97 /* WorkoutObject.swift */; };
+		CCB8CEE62CAA095C00D1BA97 /* DayOfWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */; };
+		CCB8CEE82CAA13C400D1BA97 /* SelectedDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE72CAA13C400D1BA97 /* SelectedDayView.swift */; };
+		CCB8CEEA2CAA1C1100D1BA97 /* WorkoutDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +55,7 @@
 /* Begin PBXFileReference section */
 		CC94ADFC2CA36A270091567C /* WorkoutWithABuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutWithABuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutWithABuddyApp.swift; sourceTree = "<group>"; };
-		CC94AE012CA36A270091567C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC94AE012CA36A270091567C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CC94AE032CA36A280091567C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC94AE062CA36A280091567C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC94AE0C2CA36A280091567C /* WorkoutWithABuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutWithABuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +63,25 @@
 		CC94AE162CA36A280091567C /* WorkoutWithABuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutWithABuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC94AE1A2CA36A280091567C /* WorkoutWithABuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutWithABuddyUITests.swift; sourceTree = "<group>"; };
 		CC94AE1C2CA36A280091567C /* WorkoutWithABuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutWithABuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC94AE292CA36AB40091567C /* ExerciseInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputViewController.swift; sourceTree = "<group>"; };
+		CC94AE2D2CA4ED9A0091567C /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		CC94AE2F2CA4EFF50091567C /* WeightUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnitView.swift; sourceTree = "<group>"; };
+		CC94AE312CA4F0600091567C /* WeightFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightFieldView.swift; sourceTree = "<group>"; };
+		CC94AE332CA4F9D90091567C /* WeightStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightStackViewController.swift; sourceTree = "<group>"; };
+		CC94AE352CA50E1E0091567C /* ExerciseSaveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSaveDelegate.swift; sourceTree = "<group>"; };
+		CC94AE372CA50F440091567C /* ExerciseInputUiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputUiTextField.swift; sourceTree = "<group>"; };
+		CC94AE392CA618730091567C /* PythonDbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonDbService.swift; sourceTree = "<group>"; };
+		CC94AE3B2CA618BC0091567C /* ExerciseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseObject.swift; sourceTree = "<group>"; };
+		CC94AE3E2CA9D5F00091567C /* UsernamePasswordLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernamePasswordLogin.swift; sourceTree = "<group>"; };
+		CC94AE402CA9D7C80091567C /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
+		CC94AE422CA9DA5F0091567C /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		CC94AE442CA9DE780091567C /* UserLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
+		CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWorkoutView.swift; sourceTree = "<group>"; };
+		CCB8CEE02CA9FE8A00D1BA97 /* WorkoutDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDay.swift; sourceTree = "<group>"; };
+		CCB8CEE22CAA063300D1BA97 /* WorkoutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutObject.swift; sourceTree = "<group>"; };
+		CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekView.swift; sourceTree = "<group>"; };
+		CCB8CEE72CAA13C400D1BA97 /* SelectedDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDayView.swift; sourceTree = "<group>"; };
+		CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +132,21 @@
 		CC94ADFE2CA36A270091567C /* WorkoutWithABuddy */ = {
 			isa = PBXGroup;
 			children = (
+				CCB8CEE42CAA094500D1BA97 /* WeekView */,
+				CC94AE472CA9E1450091567C /* Services */,
+				CC94AE3D2CA9D3800091567C /* Log-In */,
 				CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */,
-				CC94AE012CA36A270091567C /* ContentView.swift */,
+				CC94AE012CA36A270091567C /* MainTabBarController.swift */,
 				CC94AE032CA36A280091567C /* Assets.xcassets */,
 				CC94AE052CA36A280091567C /* Preview Content */,
+				CC94AE292CA36AB40091567C /* ExerciseInputViewController.swift */,
+				CC94AE2D2CA4ED9A0091567C /* TimePickerView.swift */,
+				CC94AE2F2CA4EFF50091567C /* WeightUnitView.swift */,
+				CC94AE312CA4F0600091567C /* WeightFieldView.swift */,
+				CC94AE332CA4F9D90091567C /* WeightStackViewController.swift */,
+				CC94AE352CA50E1E0091567C /* ExerciseSaveDelegate.swift */,
+				CC94AE372CA50F440091567C /* ExerciseInputUiTextField.swift */,
+				CC94AE3B2CA618BC0091567C /* ExerciseObject.swift */,
 			);
 			path = WorkoutWithABuddy;
 			sourceTree = "<group>";
@@ -125,6 +174,38 @@
 				CC94AE1C2CA36A280091567C /* WorkoutWithABuddyUITestsLaunchTests.swift */,
 			);
 			path = WorkoutWithABuddyUITests;
+			sourceTree = "<group>";
+		};
+		CC94AE3D2CA9D3800091567C /* Log-In */ = {
+			isa = PBXGroup;
+			children = (
+				CC94AE3E2CA9D5F00091567C /* UsernamePasswordLogin.swift */,
+				CC94AE402CA9D7C80091567C /* NewUserView.swift */,
+				CC94AE422CA9DA5F0091567C /* UserObject.swift */,
+			);
+			path = "Log-In";
+			sourceTree = "<group>";
+		};
+		CC94AE472CA9E1450091567C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC94AE442CA9DE780091567C /* UserLoginService.swift */,
+				CC94AE392CA618730091567C /* PythonDbService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CCB8CEE42CAA094500D1BA97 /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */,
+				CCB8CEE02CA9FE8A00D1BA97 /* WorkoutDay.swift */,
+				CCB8CEE22CAA063300D1BA97 /* WorkoutObject.swift */,
+				CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */,
+				CCB8CEE72CAA13C400D1BA97 /* SelectedDayView.swift */,
+				CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */,
+			);
+			path = WeekView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +338,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC94AE022CA36A270091567C /* ContentView.swift in Sources */,
+				CC94AE022CA36A270091567C /* MainTabBarController.swift in Sources */,
+				CC94AE342CA4F9D90091567C /* WeightStackViewController.swift in Sources */,
+				CC94AE492CA9E9E20091567C /* WeekWorkoutView.swift in Sources */,
+				CC94AE322CA4F0600091567C /* WeightFieldView.swift in Sources */,
+				CCB8CEEA2CAA1C1100D1BA97 /* WorkoutDropdown.swift in Sources */,
 				CC94AE002CA36A270091567C /* WorkoutWithABuddyApp.swift in Sources */,
+				CC94AE452CA9DE780091567C /* UserLoginService.swift in Sources */,
+				CCB8CEE62CAA095C00D1BA97 /* DayOfWeekView.swift in Sources */,
+				CC94AE3C2CA618BC0091567C /* ExerciseObject.swift in Sources */,
+				CC94AE382CA50F440091567C /* ExerciseInputUiTextField.swift in Sources */,
+				CC94AE2A2CA36AB40091567C /* ExerciseInputViewController.swift in Sources */,
+				CCB8CEE82CAA13C400D1BA97 /* SelectedDayView.swift in Sources */,
+				CCB8CEE12CA9FE8A00D1BA97 /* WorkoutDay.swift in Sources */,
+				CC94AE302CA4EFF50091567C /* WeightUnitView.swift in Sources */,
+				CC94AE3A2CA618730091567C /* PythonDbService.swift in Sources */,
+				CC94AE2E2CA4ED9A0091567C /* TimePickerView.swift in Sources */,
+				CC94AE3F2CA9D5F00091567C /* UsernamePasswordLogin.swift in Sources */,
+				CCB8CEE32CAA063300D1BA97 /* WorkoutObject.swift in Sources */,
+				CC94AE362CA50E1E0091567C /* ExerciseSaveDelegate.swift in Sources */,
+				CC94AE412CA9D7C80091567C /* NewUserView.swift in Sources */,
+				CC94AE432CA9DA5F0091567C /* UserObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
