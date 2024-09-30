@@ -7,33 +7,44 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let icons = [
-        "flame.fill", "bolt.fill", "heart.fill", "sun.max.fill", "drop.fill", "wind", "cloud.fill"
-    ]
+struct WorkoutDropdownView: View {
+    var selectedDay: WorkoutDay // see if you need @State modifier
     
-    @State private var selectedIcon: String = "flame.fill" // Default selected icon
+    // Use the WorkoutManager to manage the list of workouts
+    @StateObject var workoutManager = WorkoutManager()
+    
+    @State var selectedWorkoutType: WorkoutType? = nil
+    
+    // Custom initializer without parameter labels
+    init(_ selectedDay: WorkoutDay) {
+        self.selectedDay = selectedDay
+    }
     
     var body: some View {
         VStack {
-            // Selected icon display
-            HStack {
-                Text("Selected Icon: ")
-                Image(systemName: selectedIcon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-            }
-            .padding()
+            Text(selectedDay.dayOfWeek)
             
-            // Picker for selecting icon
-            Picker("Select Icon", selection: $selectedIcon) {
-                ForEach(icons, id: \.self) { icon in
+            let dayOfWeek = selectedDay.dayOfWeek
+//            let wd = workoutManager.workout(forDay: dayOfWeek)
+            
+//            Text(workoutDay?.workout?.icon ?? "icon")
+            // ok need to fix this dropdown!
+            let workoutList = PossibleWorkouts.workouts
+            Picker("Select Icon", selection: Binding(
+                get: {
+                    workoutManager.workout(forDay: dayOfWeek)
+//                    workoutDay?.workout ?? WorkoutType(name: "Core", icon: "figure.core.training") // fix this default later
+                },
+                set: { newWorkoutType in
+                    workoutManager.updateWorkout(forDay: dayOfWeek, withWorkout: newWorkoutType)
+                }
+            )) {
+                ForEach(workoutList, id: \.self) { workout in
                     HStack {
-                        Image(systemName: icon)
-                        Text(icon)
+                        Image(systemName: workout.icon)
+                        Text(workout.name)
                     }
-                    .tag(icon) // Attach a tag to each picker option
+                    .tag(workout) // Attach a tag to each picker option
                 }
             }
             .pickerStyle(MenuPickerStyle()) // Picker style as dropdown menu
@@ -43,13 +54,14 @@ struct ContentView: View {
             .cornerRadius(8)
             
             Spacer()
+//            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let workoutDay = WorkoutDay(dayOfWeek: "Monday", workout: WorkoutType(name: "Core", icon: "figure.core.training"))
+        WorkoutDropdownView(workoutDay)
     }
 }

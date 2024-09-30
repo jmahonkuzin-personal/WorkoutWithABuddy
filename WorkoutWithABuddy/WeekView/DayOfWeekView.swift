@@ -18,6 +18,7 @@ struct WeekView: View {
     var boxWidth: CGFloat
     
     @ObservedObject var selectedDayManager: SelectedDayManager
+    @ObservedObject var workoutManager: WorkoutManager
     
     // Day name in a rectangle above
     var body: some View {
@@ -39,11 +40,15 @@ struct WeekView: View {
                     }
                 }
             VStack {
-                Image(systemName: day.workout.rawValue) // rawValue indexing isn't my favorite but we can work on that later, whenever later is
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.pink)
+                let currentWorkoutForSelectedDay = workoutManager.workout(forDay: day.dayOfWeek)
+                if (currentWorkoutForSelectedDay != nil) {
+                    let currentIcon = currentWorkoutForSelectedDay?.workout?.icon
+                    Image(systemName: currentIcon ?? "heart")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.pink)
+                }
             }
             .frame(width: boxWidth, height: 160)
             .background(

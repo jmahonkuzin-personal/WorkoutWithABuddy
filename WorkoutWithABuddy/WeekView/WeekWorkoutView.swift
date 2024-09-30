@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct WeekWorkoutView: View {
-    let weekWorkout = WeekWorkout()
-        
+    @StateObject var workoutManager = WorkoutManager()
     @StateObject var selectedDayManager = SelectedDayManager()
     
     var body: some View {
@@ -25,15 +24,16 @@ struct WeekWorkoutView: View {
             
             GeometryReader { geometry in
                 let screenWidth = geometry.size.width
-                let boxWidth = screenWidth / CGFloat(weekWorkout.days.count) - 10 // Subtract for padding/margins
+                let numOfDaysInAWeek = 7
+                let boxWidth = screenWidth / CGFloat(numOfDaysInAWeek) - 10 // Subtract for padding/margins
                 
                 HStack(alignment: .top, spacing: 4) {
-                    ForEach(weekWorkout.days) { workoutDay in
-                        WeekView(day: workoutDay, boxWidth: boxWidth, selectedDayManager: selectedDayManager)
+                    ForEach(workoutManager.workouts) { workoutDay in
+                        WeekView(day: workoutDay, boxWidth: boxWidth, selectedDayManager: selectedDayManager                        )
                     }
                 }
                 .frame(maxWidth: screenWidth)
-                .padding(.horizontal, (geometry.size.width - (boxWidth * CGFloat(weekWorkout.days.count) + CGFloat(10 * (weekWorkout.days.count - 1)))) / 2)
+                .padding(.horizontal, (geometry.size.width - (boxWidth * CGFloat(numOfDaysInAWeek) + CGFloat(10 * (numOfDaysInAWeek - 1)))) / 2)
                 .position(x: geometry.size.width / 2, y: 150) // Set a fixed position for the week view
             }
             .frame(height: 50) // overall height of the view
@@ -43,7 +43,7 @@ struct WeekWorkoutView: View {
             
             // Text displaying the selected day
             if let selectedDay = selectedDayManager.selectedDay {
-                SelectedDayView(selectedDay)
+                WorkoutDropdownView(selectedDay)
             } else {
                 Text("Select a day")
                     .font(.title2)
