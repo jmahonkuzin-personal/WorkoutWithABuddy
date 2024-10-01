@@ -8,19 +8,18 @@
 import Foundation
 
 
-// Model representing the workout for the entire week
 class WorkoutManager: ObservableObject {
     @Published var workouts: [WorkoutDay]
     
     init() {
         self.workouts = [
+            WorkoutDay(dayOfWeek: "Sun", workout: WorkoutType.rest),
             WorkoutDay(dayOfWeek: "Mon", workout: WorkoutType.rest),
             WorkoutDay(dayOfWeek: "Tue", workout: WorkoutType.rest),
             WorkoutDay(dayOfWeek: "Wed", workout: WorkoutType.rest),
             WorkoutDay(dayOfWeek: "Thu", workout: WorkoutType.rest),
             WorkoutDay(dayOfWeek: "Fri", workout: WorkoutType.rest),
-            WorkoutDay(dayOfWeek: "Sat", workout: WorkoutType.rest),
-            WorkoutDay(dayOfWeek: "Sun", workout: WorkoutType.rest)
+            WorkoutDay(dayOfWeek: "Sat", workout: WorkoutType.rest)
         ]
     }
     

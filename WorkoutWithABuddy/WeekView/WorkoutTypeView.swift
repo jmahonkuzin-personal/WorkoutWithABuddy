@@ -26,6 +26,7 @@ struct WorkoutTypeView: View {
                 .scaledToFit()
                 .frame(width: 30, height: 30)
                 .foregroundColor(.pink)
+            Text(currentWorkoutForSelectedDay.id)
         }
     }
 }

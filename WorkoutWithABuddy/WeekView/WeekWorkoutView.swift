@@ -45,7 +45,7 @@ struct WeekWorkoutView: View {
                 
                 // Text displaying the selected day
                 if let selectedWorkoutDay = selectedDayManager.selectedDay {
-                    WorkoutDropdownView(selectedDayOfWeek: selectedWorkoutDay.dayOfWeek, workoutManager:  workoutManager)
+                    WorkoutDropdownView(selectedDayOfWeek: selectedWorkoutDay.dayOfWeek, workoutManager: workoutManager)
                     NavigationLink(destination: AddDetailsView()) {
                         Text("Add exercises")
                             .foregroundColor(.blue)

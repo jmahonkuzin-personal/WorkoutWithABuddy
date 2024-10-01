@@ -25,7 +25,7 @@ struct DayOfWeekView: View {
         VStack {
             RoundedRectangle(cornerRadius: 2)
                 .fill(day == selectedDayManager.selectedDay ? Color.blue.opacity(0.4) : Color.gray.opacity(0.2))
-                .frame(width: boxWidth, height: 20)
+                .frame(width: boxWidth, height: 30)
                 .overlay(
                     Text(day.dayOfWeek)
                     .font(.caption)
