@@ -12,10 +12,10 @@ import SwiftUI
 struct WorkoutDay: Identifiable, Equatable {
     let id = UUID()
     var dayOfWeek: String
-    var workout: WorkoutType? = nil
+    var workout: WorkoutType
     
     // Custom implementation of Equatable
     static func == (lhs: WorkoutDay, rhs: WorkoutDay) -> Bool {
-        return lhs.dayOfWeek == rhs.dayOfWeek && lhs.workout?.name == rhs.workout?.name && lhs.workout?.icon == rhs.workout?.icon
+        return lhs.dayOfWeek == rhs.dayOfWeek && lhs.workout == rhs.workout
     }
 }

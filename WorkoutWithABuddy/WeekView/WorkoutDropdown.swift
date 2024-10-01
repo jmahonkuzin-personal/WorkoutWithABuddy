@@ -8,60 +8,49 @@
 import SwiftUI
 
 struct WorkoutDropdownView: View {
-    var selectedDay: WorkoutDay // see if you need @State modifier
+    var selectedDayOfWeek: String
     
     // Use the WorkoutManager to manage the list of workouts
-    @StateObject var workoutManager = WorkoutManager()
-    
-    @State var selectedWorkoutType: WorkoutType? = nil
-    
-    // Custom initializer without parameter labels
-    init(_ selectedDay: WorkoutDay) {
-        self.selectedDay = selectedDay
-    }
+    @ObservedObject var workoutManager: WorkoutManager
     
     var body: some View {
         VStack {
-            Text(selectedDay.dayOfWeek)
-            
-            let dayOfWeek = selectedDay.dayOfWeek
-//            let wd = workoutManager.workout(forDay: dayOfWeek)
-            
-//            Text(workoutDay?.workout?.icon ?? "icon")
-            // ok need to fix this dropdown!
-            let workoutList = PossibleWorkouts.workouts
-            Picker("Select Icon", selection: Binding(
+            let workoutOptions = WorkoutType.allCases
+            Picker("Select workout", selection: Binding(
                 get: {
-                    workoutManager.workout(forDay: dayOfWeek)
-//                    workoutDay?.workout ?? WorkoutType(name: "Core", icon: "figure.core.training") // fix this default later
+                    workoutManager.getWorkout(forDay: selectedDayOfWeek)
                 },
-                set: { newWorkoutType in
-                    workoutManager.updateWorkout(forDay: dayOfWeek, withWorkout: newWorkoutType)
+                set: {
+                    selectedWorkoutType in
+                    workoutManager.updateWorkout(forDay: selectedDayOfWeek, withWorkout: selectedWorkoutType)
                 }
-            )) {
-                ForEach(workoutList, id: \.self) { workout in
-                    HStack {
-                        Image(systemName: workout.icon)
-                        Text(workout.name)
+            ))
+            {
+                ForEach(workoutOptions) { workoutType in
+                    HStack(spacing: 103) { // spacing not working
+                        Image(systemName: workoutType.icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 30)
+                        Spacer()
+                        Text(workoutType.id)
+                            .padding(.leading, 30)
                     }
-                    .tag(workout) // Attach a tag to each picker option
+                    .padding(.vertical, 10)
+                    .tag(workoutType)
                 }
             }
-            .pickerStyle(MenuPickerStyle()) // Picker style as dropdown menu
-            .padding()
+            .pickerStyle(MenuPickerStyle())
+//            .padding()
             .frame(width: 200, height: 40)
             .background(Color.gray.opacity(0.2))
             .cornerRadius(8)
-            
-            Spacer()
-//            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WorkoutDropdownView_Previews: PreviewProvider {
     static var previews: some View {
-        let workoutDay = WorkoutDay(dayOfWeek: "Monday", workout: WorkoutType(name: "Core", icon: "figure.core.training"))
-        WorkoutDropdownView(workoutDay)
+        WorkoutDropdownView(selectedDayOfWeek: "Monday", workoutManager: WorkoutManager())
     }
 }

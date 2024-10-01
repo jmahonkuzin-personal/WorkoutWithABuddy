@@ -13,7 +13,7 @@ class SelectedDayManager: ObservableObject {
 }
 
 // The view that holds the day name and icon
-struct WeekView: View {
+struct DayOfWeekView: View {
     var day: WorkoutDay
     var boxWidth: CGFloat
     
@@ -25,7 +25,7 @@ struct WeekView: View {
         VStack {
             RoundedRectangle(cornerRadius: 2)
                 .fill(day == selectedDayManager.selectedDay ? Color.blue.opacity(0.4) : Color.gray.opacity(0.2))
-                .frame(width: boxWidth, height: 40)
+                .frame(width: boxWidth, height: 20)
                 .overlay(
                     Text(day.dayOfWeek)
                     .font(.caption)
@@ -39,18 +39,8 @@ struct WeekView: View {
                         selectedDayManager.selectedDay = day // Select the day
                     }
                 }
-            VStack {
-                let currentWorkoutForSelectedDay = workoutManager.workout(forDay: day.dayOfWeek)
-                if (currentWorkoutForSelectedDay != nil) {
-                    let currentIcon = currentWorkoutForSelectedDay?.workout?.icon
-                    Image(systemName: currentIcon ?? "heart")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(.pink)
-                }
-            }
-            .frame(width: boxWidth, height: 160)
+            WorkoutTypeView(dayOfWeek: day.dayOfWeek, workoutManager: workoutManager)
+            .frame(width: boxWidth, height: 115)
             .background(
                 RoundedRectangle(cornerRadius: 2)
                     .fill(day == selectedDayManager.selectedDay ? Color.blue.opacity(0.4) : Color.gray.opacity(0.2))

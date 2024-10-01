@@ -14,20 +14,20 @@ class WorkoutManager: ObservableObject {
     
     init() {
         self.workouts = [
-            WorkoutDay(dayOfWeek: "Mon"),
-            WorkoutDay(dayOfWeek: "Tue"),
-            WorkoutDay(dayOfWeek: "Wed"),
-            WorkoutDay(dayOfWeek: "Thu"),
-            WorkoutDay(dayOfWeek: "Fri"),
-            WorkoutDay(dayOfWeek: "Sat"),
-            WorkoutDay(dayOfWeek: "Sun")
+            WorkoutDay(dayOfWeek: "Mon", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Tue", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Wed", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Thu", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Fri", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Sat", workout: WorkoutType.rest),
+            WorkoutDay(dayOfWeek: "Sun", workout: WorkoutType.rest)
         ]
     }
     
     // Function to retrieve a workout by day
-    func workout(forDay day: String) -> WorkoutType {
+    func getWorkout(forDay day: String) -> WorkoutType {
         let first = workouts.first { $0.dayOfWeek == day }
-        return first?.workout ?? WorkoutType(name: "Core", icon: "flame")
+        return first?.workout ?? WorkoutType.rest
     }
     
     // Function to update a workout by day
