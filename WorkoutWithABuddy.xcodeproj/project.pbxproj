@@ -35,14 +35,14 @@
 		CCB8CEF02CAA2BD600D1BA97 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */; };
 		CCB8CEF22CAC429500D1BA97 /* WorkoutTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */; };
 		CCB8CEF42CAC4F1200D1BA97 /* AddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */; };
-		CCB8CEF62CAC514D00D1BA97 /* DraggableExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF52CAC514D00D1BA97 /* DraggableExample.swift */; };
-		CCB8CEF82CAC541400D1BA97 /* EditableListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF72CAC541400D1BA97 /* EditableListExample.swift */; };
 		CCB8CEFD2CAC5D1000D1BA97 /* ExerciseInputControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEFC2CAC5D1000D1BA97 /* ExerciseInputControllerWrapper.swift */; };
 		CCB8CEFF2CAC5D9600D1BA97 /* ExerciseDetailsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEFE2CAC5D9600D1BA97 /* ExerciseDetailsInputViewController.swift */; };
-		CCB8CF012CAC605F00D1BA97 /* AddDetailsLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF002CAC605F00D1BA97 /* AddDetailsLinkView.swift */; };
-		CCB8CF042CAC7EA200D1BA97 /* DropExerciseViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF032CAC7EA200D1BA97 /* DropExerciseViewDelegate.swift */; };
 		CCB8CF062CAC82A100D1BA97 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */; };
 		CCB8CF082CAC85B800D1BA97 /* SetsAndRepsNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF072CAC85B800D1BA97 /* SetsAndRepsNumView.swift */; };
+		CCB8CF0B2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */; };
+		CCB8CF0D2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */; };
+		CCB8CF0F2CACA27700D1BA97 /* DnDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0E2CACA27700D1BA97 /* DnDTest.swift */; };
+		CCB8CF142CACC93D00D1BA97 /* SelectedDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF132CACC93D00D1BA97 /* SelectedDayManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,14 +94,14 @@
 		CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeView.swift; sourceTree = "<group>"; };
 		CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsView.swift; sourceTree = "<group>"; };
-		CCB8CEF52CAC514D00D1BA97 /* DraggableExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableExample.swift; sourceTree = "<group>"; };
-		CCB8CEF72CAC541400D1BA97 /* EditableListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableListExample.swift; sourceTree = "<group>"; };
 		CCB8CEFC2CAC5D1000D1BA97 /* ExerciseInputControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputControllerWrapper.swift; sourceTree = "<group>"; };
 		CCB8CEFE2CAC5D9600D1BA97 /* ExerciseDetailsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsInputViewController.swift; sourceTree = "<group>"; };
-		CCB8CF002CAC605F00D1BA97 /* AddDetailsLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsLinkView.swift; sourceTree = "<group>"; };
-		CCB8CF032CAC7EA200D1BA97 /* DropExerciseViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropExerciseViewDelegate.swift; sourceTree = "<group>"; };
 		CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		CCB8CF072CAC85B800D1BA97 /* SetsAndRepsNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsAndRepsNumView.swift; sourceTree = "<group>"; };
+		CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExerciseInputView.swift; sourceTree = "<group>"; };
+		CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnitPickerView.swift; sourceTree = "<group>"; };
+		CCB8CF0E2CACA27700D1BA97 /* DnDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnDTest.swift; sourceTree = "<group>"; };
+		CCB8CF132CACC93D00D1BA97 /* SelectedDayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDayManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +152,9 @@
 		CC94ADFE2CA36A270091567C /* WorkoutWithABuddy */ = {
 			isa = PBXGroup;
 			children = (
+				CCB8CF122CACC90500D1BA97 /* Managers */,
+				CCB8CF112CACC8D400D1BA97 /* Deprecated */,
+				CCB8CF092CAC958400D1BA97 /* SwiftUiExerciseInput */,
 				CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */,
 				CC94AE012CA36A270091567C /* MainTabBarController.swift */,
 				CCB8CF022CAC7D4B00D1BA97 /* SingleExerciseInput */,
@@ -161,6 +164,7 @@
 				CC94AE3D2CA9D3800091567C /* Log-In */,
 				CC94AE032CA36A280091567C /* Assets.xcassets */,
 				CC94AE052CA36A280091567C /* Preview Content */,
+				CCB8CF0E2CACA27700D1BA97 /* DnDTest.swift */,
 			);
 			path = WorkoutWithABuddy;
 			sourceTree = "<group>";
@@ -217,9 +221,7 @@
 				CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */,
 				CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */,
 				CCB8CEEB2CAA272300D1BA97 /* WorkoutTypes.swift */,
-				CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */,
 				CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */,
-				CCB8CF002CAC605F00D1BA97 /* AddDetailsLinkView.swift */,
 			);
 			path = WeekView;
 			sourceTree = "<group>";
@@ -228,9 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */,
-				CCB8CEF72CAC541400D1BA97 /* EditableListExample.swift */,
-				CCB8CEF52CAC514D00D1BA97 /* DraggableExample.swift */,
-				CCB8CF032CAC7EA200D1BA97 /* DropExerciseViewDelegate.swift */,
 				CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */,
 			);
 			path = DragAndDrop;
@@ -242,16 +241,41 @@
 				CC94AE332CA4F9D90091567C /* WeightStackViewController.swift */,
 				CC94AE3B2CA618BC0091567C /* ExerciseObject.swift */,
 				CC94AE2D2CA4ED9A0091567C /* TimePickerView.swift */,
-				CC94AE2F2CA4EFF50091567C /* WeightUnitView.swift */,
-				CC94AE312CA4F0600091567C /* WeightFieldView.swift */,
+			);
+			path = SingleExerciseInput;
+			sourceTree = "<group>";
+		};
+		CCB8CF092CAC958400D1BA97 /* SwiftUiExerciseInput */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */,
+				CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */,
+			);
+			path = SwiftUiExerciseInput;
+			sourceTree = "<group>";
+		};
+		CCB8CF112CACC8D400D1BA97 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
 				CC94AE372CA50F440091567C /* ExerciseInputUiTextField.swift */,
 				CC94AE352CA50E1E0091567C /* ExerciseSaveDelegate.swift */,
 				CC94AE292CA36AB40091567C /* ExerciseInputViewController.swift */,
 				CCB8CEFC2CAC5D1000D1BA97 /* ExerciseInputControllerWrapper.swift */,
+				CC94AE2F2CA4EFF50091567C /* WeightUnitView.swift */,
 				CCB8CEFE2CAC5D9600D1BA97 /* ExerciseDetailsInputViewController.swift */,
+				CC94AE312CA4F0600091567C /* WeightFieldView.swift */,
 				CCB8CF072CAC85B800D1BA97 /* SetsAndRepsNumView.swift */,
 			);
-			path = SingleExerciseInput;
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		CCB8CF122CACC90500D1BA97 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */,
+				CCB8CF132CACC93D00D1BA97 /* SelectedDayManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,8 +411,7 @@
 				CC94AE022CA36A270091567C /* MainTabBarController.swift in Sources */,
 				CCB8CF062CAC82A100D1BA97 /* ButtonsView.swift in Sources */,
 				CCB8CEF42CAC4F1200D1BA97 /* AddDetailsView.swift in Sources */,
-				CCB8CEF82CAC541400D1BA97 /* EditableListExample.swift in Sources */,
-				CCB8CF012CAC605F00D1BA97 /* AddDetailsLinkView.swift in Sources */,
+				CCB8CF142CACC93D00D1BA97 /* SelectedDayManager.swift in Sources */,
 				CC94AE342CA4F9D90091567C /* WeightStackViewController.swift in Sources */,
 				CCB8CEF02CAA2BD600D1BA97 /* WorkoutManager.swift in Sources */,
 				CCB8CEF22CAC429500D1BA97 /* WorkoutTypeView.swift in Sources */,
@@ -400,14 +423,15 @@
 				CC94AE452CA9DE780091567C /* UserLoginService.swift in Sources */,
 				CCB8CEE62CAA095C00D1BA97 /* DayOfWeekView.swift in Sources */,
 				CC94AE3C2CA618BC0091567C /* ExerciseObject.swift in Sources */,
+				CCB8CF0F2CACA27700D1BA97 /* DnDTest.swift in Sources */,
 				CC94AE382CA50F440091567C /* ExerciseInputUiTextField.swift in Sources */,
+				CCB8CF0D2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift in Sources */,
 				CCB8CEEC2CAA272300D1BA97 /* WorkoutTypes.swift in Sources */,
-				CCB8CEF62CAC514D00D1BA97 /* DraggableExample.swift in Sources */,
+				CCB8CF0B2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift in Sources */,
 				CC94AE2A2CA36AB40091567C /* ExerciseInputViewController.swift in Sources */,
 				CCB8CEE12CA9FE8A00D1BA97 /* WorkoutDay.swift in Sources */,
 				CC94AE302CA4EFF50091567C /* WeightUnitView.swift in Sources */,
 				CCB8CEFF2CAC5D9600D1BA97 /* ExerciseDetailsInputViewController.swift in Sources */,
-				CCB8CF042CAC7EA200D1BA97 /* DropExerciseViewDelegate.swift in Sources */,
 				CC94AE3A2CA618730091567C /* PythonDbService.swift in Sources */,
 				CC94AE2E2CA4ED9A0091567C /* TimePickerView.swift in Sources */,
 				CC94AE3F2CA9D5F00091567C /* UsernamePasswordLogin.swift in Sources */,

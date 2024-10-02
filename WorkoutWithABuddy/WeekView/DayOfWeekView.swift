@@ -7,10 +7,6 @@
 
 import Foundation
 import SwiftUI
-// ObservableObject to manage the selected day
-class SelectedDayManager: ObservableObject {
-    @Published var selectedDay: WorkoutDay? = nil
-}
 
 // The view that holds the day name and icon
 struct DayOfWeekView: View {

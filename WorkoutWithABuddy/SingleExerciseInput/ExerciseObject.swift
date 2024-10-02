@@ -8,13 +8,14 @@
 import Foundation
 
 
-struct Exercise: Codable, Equatable, Hashable {
-    let name: String
-    let weight: String // change to numbers at some point, but we can just store as strings for now
-    let weightUnit: String
-    let sets: String
-    let reps: String
-    let time: String
+struct Exercise: Identifiable, Codable, Equatable, Hashable {
+    var id = UUID()
+    var name: String
+    var weight: String // change to numbers at some point, but we can just store as strings for now
+    var weightUnit: String
+    var sets: String
+    var reps: String
+    var time: String
     
     init(name: String, weight: String, weightUnit: String, sets: String, reps: String, time: String) {
         self.name = name
@@ -25,10 +26,19 @@ struct Exercise: Codable, Equatable, Hashable {
         self.time = time
     }
     
+    init(name: String) {
+        self.name = name
+        self.weight = ""
+        self.weightUnit = "lbs"
+        self.sets = ""
+        self.reps = ""
+        self.time = ""
+    }
+    
     init() {
         self.name = ""
         self.weight = ""
-        self.weightUnit = ""
+        self.weightUnit = "lbs"
         self.sets = ""
         self.reps = ""
         self.time = ""

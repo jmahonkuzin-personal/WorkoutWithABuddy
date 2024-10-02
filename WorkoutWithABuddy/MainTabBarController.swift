@@ -15,10 +15,10 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        let exerciseInputVC = self.createNav(with: "Edit", and: UIImage(systemName: "square.and.pencil"), vc: ExerciseInputViewController())
-        let exerciseInputVC2 = self.createNav(with: "Disp", and: UIImage(systemName: "house"), vc: ExerciseInputViewController())
-        
-        self.setViewControllers([exerciseInputVC, exerciseInputVC2], animated: true)
+//        let exerciseInputVC = self.createNav(with: "Edit", and: UIImage(systemName: "square.and.pencil"), vc: ExerciseInputViewController())
+//        let exerciseInputVC2 = self.createNav(with: "Disp", and: UIImage(systemName: "house"), vc: ExerciseInputViewController())
+//        
+//        self.setViewControllers([exerciseInputVC, exerciseInputVC2], animated: true)
         
     }
     

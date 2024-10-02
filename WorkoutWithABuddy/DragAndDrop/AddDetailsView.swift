@@ -9,55 +9,86 @@ import Foundation
 
 import SwiftUI
 
-// ObservableObject class with a @Published property
-//class WorkoutTypeDetailsObservable: ObservableObject {
-//    @Published var details: DraggableWorkoutDetailsItem?
-//}
-//
-//struct DraggableWorkoutDetailsItem: Identifiable, Hashable {
-//    let id = UUID()
-//    var text: String
-//}
-
-// The view that holds the day name and icon
 struct AddDetailsView: View {
     
-    @State private var draggedExercise: Exercise?
-    @State private var exerciseList: [Exercise] = []
-    let emptyExerciseList = Array(repeating: Exercise(), count: 3)
+    var workoutType: WorkoutType
+    
+    @State private var starterExerciseList = [
+        Exercise(),
+        Exercise(),
+        Exercise() // maybe change to an Array() impl // need to save this into a larger
+        // data structure
+    ]
     
     var body: some View {
-        ScrollView(showsIndicators: false, content: {
-            VStack(spacing: 10, content: {
-                Spacer()
-                    .frame(height: 80)
-                
-                let eList = exerciseList.isEmpty == false ? exerciseList : emptyExerciseList
-                
-                ForEach(eList, id: \.self) { e in
-                    ExerciseInputControllerWrapper()
-                        .frame(width: 350, height: 150)
-                        .cornerRadius(10)
-                        .onDrag({
-                            self.draggedExercise = e
-                            return NSItemProvider()
-                        })
+        VStack {
+            Spacer()
+                .frame(height: 20)
+            Text("Input workouts for \(workoutType.rawValue) day:")
+                .font(.title)
+                .bold()
+            
+            List {
+                ForEach(starterExerciseList.indices, id: \.self) { index in
+                    VStack {
+                        Text("\(index + 1)")
+                            .bold()
+                        HStack(spacing: 5) {
+                            Image(systemName: "line.3.horizontal")
+                                .foregroundColor(.gray)
+                                
+                            SwiftUIExerciseInputView(
+                                exercise: $starterExerciseList[index]
+                            )
+                            Spacer()
+                            Button(action: {
+                                removeItem(at: index)
+                            }) {
+                                Image(systemName: "xmark.circle")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                    }
                 }
-                
-                Spacer()
-                    .frame(height: 20)
-                
-                ButtonsView()
-            })
-            .padding(.horizontal, 20)
-        })
-        .ignoresSafeArea()
+                .onMove(perform: move)
+            }
+            .listStyle(PlainListStyle())
+            .listRowSpacing(5)
+            .scrollContentBackground(.hidden)
+            
+            
+            Button(action: {
+                addEmptyExerciseItem()
+            }) {
+                Text("Add another exercise")
+                    .foregroundColor(.blue)
+                    .font(.title3)
+                    .underline()
+            }
+            
+            Spacer()
+                .frame(height: 40)
+            
+            ButtonsView()
+        }
+        .background(.gray)
+    }
+    
+    func move(from source: IndexSet, to destination: Int) {
+        starterExerciseList.move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func addEmptyExerciseItem() {
+        starterExerciseList.append(Exercise())
+    }
+    
+    func removeItem(at index: Int) {
+        starterExerciseList.remove(at: index)
     }
 }
 
-
 struct AddDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddDetailsView()
+        AddDetailsView(workoutType: WorkoutType.push)
     }
 }

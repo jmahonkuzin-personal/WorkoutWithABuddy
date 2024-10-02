@@ -16,13 +16,9 @@ class SetsAndRepsNumView {
     var numRepsTextField: UITextField!
     var numSetsTextField: UITextField!
     
-    init() {
-        setupStackView()
-    }
-    
-    func setupStackView() {
-        numRepsTextField = ExerciseInputUiTextField(placeholder: "Reps")
-        numSetsTextField = ExerciseInputUiTextField(placeholder: "Sets")
+    init(e: Exercise) {
+        numRepsTextField = ExerciseInputUiTextField(placeholder: "Reps", input: e.reps)
+        numSetsTextField = ExerciseInputUiTextField(placeholder: "Sets", input: e.sets)
 
         setsRepsHorizontalStack = UIStackView(arrangedSubviews: [numRepsTextField, numSetsTextField])
         

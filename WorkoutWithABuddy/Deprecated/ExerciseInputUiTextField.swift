@@ -14,10 +14,11 @@ class ExerciseInputUiTextField: UITextField, ExerciseSaveDelegate {
         self.text = ""
     }
     
-    init(placeholder: String) {
+    init(placeholder: String, input: String) {
         super.init(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
         self.placeholder = placeholder
         self.borderStyle = .roundedRect
+        self.text = input
     }
     
     required init?(coder: NSCoder) {

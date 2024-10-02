@@ -26,7 +26,7 @@ struct WeekWorkoutView: View {
                 GeometryReader { geometry in
                     let screenWidth = geometry.size.width
                     let numOfDaysInAWeek = 7
-                    let boxWidth = screenWidth / CGFloat(numOfDaysInAWeek) - 10 // Subtract for padding/margins
+                    let boxWidth = screenWidth / CGFloat(numOfDaysInAWeek) - 10
                     
                     HStack(alignment: .top, spacing: 4) {
                         ForEach(workoutManager.workouts) { workoutDay in
@@ -45,11 +45,20 @@ struct WeekWorkoutView: View {
                 
                 // Text displaying the selected day
                 if let selectedWorkoutDay = selectedDayManager.selectedDay {
-                    WorkoutDropdownView(selectedDayOfWeek: selectedWorkoutDay.dayOfWeek, workoutManager: workoutManager)
-                    NavigationLink(destination: AddDetailsView()) {
-                        Text("Add exercises")
-                            .foregroundColor(.blue)
-                            .padding(.top, 5)
+                    let dayOfWeek = selectedWorkoutDay.dayOfWeek
+                    WorkoutDropdownView(selectedDayOfWeek: dayOfWeek, workoutManager: workoutManager)
+                    let selectedExercise = workoutManager.getWorkout(forDay: dayOfWeek)
+                    if selectedExercise != WorkoutType.rest {
+                        NavigationLink(destination: AddDetailsView(
+                            workoutType: workoutManager.getWorkout(forDay: selectedWorkoutDay.dayOfWeek)
+                        )
+                            .navigationBarBackButtonHidden(true)
+                        ) {
+                            Text("Add exercises to your \(selectedExercise.id) day")
+                                .foregroundColor(.blue)
+                                .padding(.top, 5)
+                        }
+                        .navigationBarBackButtonHidden(true)
                     }
                 } else {
                     Text("Select a day")
