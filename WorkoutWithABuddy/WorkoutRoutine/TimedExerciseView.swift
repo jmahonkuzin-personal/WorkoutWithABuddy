@@ -9,6 +9,7 @@ import SwiftUI
 struct CircularRunLoopTimerView: View {
     @State private var timeRemaining: Double = 20 // Set the countdown timer duration here (in seconds)
     @State private var isActive = false
+    @State private var showExitPopup = false
     let totalTime: Double = 20 // The total countdown time
     @State private var timer: Timer?
     

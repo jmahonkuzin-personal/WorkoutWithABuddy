@@ -45,6 +45,7 @@
 		CCB8CF142CACC93D00D1BA97 /* SelectedDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF132CACC93D00D1BA97 /* SelectedDayManager.swift */; };
 		CCB8CF172CAE25D600D1BA97 /* TimedExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF162CAE25D600D1BA97 /* TimedExerciseView.swift */; };
 		CCB8CF192CAE329F00D1BA97 /* PrettySymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF182CAE329F00D1BA97 /* PrettySymbolView.swift */; };
+		CCB8CF1B2CAF91C300D1BA97 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF1A2CAF91C300D1BA97 /* BottomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		CCB8CF132CACC93D00D1BA97 /* SelectedDayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDayManager.swift; sourceTree = "<group>"; };
 		CCB8CF162CAE25D600D1BA97 /* TimedExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedExerciseView.swift; sourceTree = "<group>"; };
 		CCB8CF182CAE329F00D1BA97 /* PrettySymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettySymbolView.swift; sourceTree = "<group>"; };
+		CCB8CF1A2CAF91C300D1BA97 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB8CF162CAE25D600D1BA97 /* TimedExerciseView.swift */,
+				CCB8CF1A2CAF91C300D1BA97 /* BottomTabView.swift */,
 			);
 			path = WorkoutRoutine;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				CC94AE2E2CA4ED9A0091567C /* TimePickerView.swift in Sources */,
 				CC94AE3F2CA9D5F00091567C /* UsernamePasswordLogin.swift in Sources */,
 				CCB8CF192CAE329F00D1BA97 /* PrettySymbolView.swift in Sources */,
+				CCB8CF1B2CAF91C300D1BA97 /* BottomTabView.swift in Sources */,
 				CCB8CEFD2CAC5D1000D1BA97 /* ExerciseInputControllerWrapper.swift in Sources */,
 				CC94AE362CA50E1E0091567C /* ExerciseSaveDelegate.swift in Sources */,
 				CC94AE412CA9D7C80091567C /* NewUserView.swift in Sources */,

@@ -24,8 +24,8 @@ struct AddDetailsView: View {
         VStack {
             Spacer()
                 .frame(height: 20)
-            Text("Input workouts for \(workoutType.rawValue) day:")
-                .font(.title)
+            Text("Add workouts for \(workoutType.rawValue) day:")
+                .font(.system(size:28))
                 .bold()
             
             List {
@@ -62,7 +62,7 @@ struct AddDetailsView: View {
             }) {
                 Text("Add another exercise")
                     .foregroundColor(.blue)
-                    .font(.title3)
+                    .font(.system(size:25)) // more consistent way to size a font!!!
                     .underline()
             }
             
