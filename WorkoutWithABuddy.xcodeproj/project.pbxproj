@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC14B7712CB0E0A700807C14 /* AddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B7692CB0E0A700807C14 /* AddDetailsView.swift */; };
+		CC14B7722CB0E0A700807C14 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B76A2CB0E0A700807C14 /* ButtonsView.swift */; };
+		CC14B7732CB0E0A700807C14 /* DayOfWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B76C2CB0E0A700807C14 /* DayOfWeekView.swift */; };
+		CC14B7742CB0E0A700807C14 /* WeekWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B76D2CB0E0A700807C14 /* WeekWorkoutView.swift */; };
+		CC14B7752CB0E0A700807C14 /* WorkoutDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B76E2CB0E0A700807C14 /* WorkoutDropdown.swift */; };
+		CC14B7762CB0E0A700807C14 /* WorkoutTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14B76F2CB0E0A700807C14 /* WorkoutTypeView.swift */; };
 		CC7219FD2CB098F300DA12D5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7219FC2CB098F300DA12D5 /* TimerView.swift */; };
 		CC7219FF2CB09A5000DA12D5 /* NotesInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7219FE2CB09A5000DA12D5 /* NotesInputView.swift */; };
 		CC721A012CB0D17100DA12D5 /* WorkoutRoutineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC721A002CB0D17100DA12D5 /* WorkoutRoutineManager.swift */; };
@@ -33,15 +39,9 @@
 		CC94AE412CA9D7C80091567C /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE402CA9D7C80091567C /* CreateUserView.swift */; };
 		CC94AE432CA9DA5F0091567C /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE422CA9DA5F0091567C /* UserObject.swift */; };
 		CC94AE452CA9DE780091567C /* UserLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE442CA9DE780091567C /* UserLoginService.swift */; };
-		CC94AE492CA9E9E20091567C /* WeekWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */; };
 		CCB8CEE12CA9FE8A00D1BA97 /* WorkoutDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE02CA9FE8A00D1BA97 /* WorkoutDay.swift */; };
-		CCB8CEE62CAA095C00D1BA97 /* DayOfWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */; };
-		CCB8CEEA2CAA1C1100D1BA97 /* WorkoutDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */; };
 		CCB8CEEC2CAA272300D1BA97 /* WorkoutTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEEB2CAA272300D1BA97 /* WorkoutTypes.swift */; };
 		CCB8CEF02CAA2BD600D1BA97 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */; };
-		CCB8CEF22CAC429500D1BA97 /* WorkoutTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */; };
-		CCB8CEF42CAC4F1200D1BA97 /* AddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */; };
-		CCB8CF062CAC82A100D1BA97 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */; };
 		CCB8CF0B2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */; };
 		CCB8CF0D2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */; };
 		CCB8CF0F2CACA27700D1BA97 /* DnDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF0E2CACA27700D1BA97 /* DnDTest.swift */; };
@@ -69,6 +69,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC14B7692CB0E0A700807C14 /* AddDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailsView.swift; sourceTree = "<group>"; };
+		CC14B76A2CB0E0A700807C14 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		CC14B76C2CB0E0A700807C14 /* DayOfWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeekView.swift; sourceTree = "<group>"; };
+		CC14B76D2CB0E0A700807C14 /* WeekWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekWorkoutView.swift; sourceTree = "<group>"; };
+		CC14B76E2CB0E0A700807C14 /* WorkoutDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDropdown.swift; sourceTree = "<group>"; };
+		CC14B76F2CB0E0A700807C14 /* WorkoutTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTypeView.swift; sourceTree = "<group>"; };
 		CC7219FC2CB098F300DA12D5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CC7219FE2CB09A5000DA12D5 /* NotesInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesInputView.swift; sourceTree = "<group>"; };
 		CC721A002CB0D17100DA12D5 /* WorkoutRoutineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRoutineManager.swift; sourceTree = "<group>"; };
@@ -98,15 +104,9 @@
 		CC94AE402CA9D7C80091567C /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
 		CC94AE422CA9DA5F0091567C /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		CC94AE442CA9DE780091567C /* UserLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
-		CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWorkoutView.swift; sourceTree = "<group>"; };
 		CCB8CEE02CA9FE8A00D1BA97 /* WorkoutDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDay.swift; sourceTree = "<group>"; };
-		CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekView.swift; sourceTree = "<group>"; };
-		CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDropdown.swift; sourceTree = "<group>"; };
 		CCB8CEEB2CAA272300D1BA97 /* WorkoutTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypes.swift; sourceTree = "<group>"; };
 		CCB8CEEF2CAA2BD600D1BA97 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
-		CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeView.swift; sourceTree = "<group>"; };
-		CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsView.swift; sourceTree = "<group>"; };
-		CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExerciseInputView.swift; sourceTree = "<group>"; };
 		CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnitPickerView.swift; sourceTree = "<group>"; };
 		CCB8CF0E2CACA27700D1BA97 /* DnDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnDTest.swift; sourceTree = "<group>"; };
@@ -141,6 +141,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC14B76B2CB0E0A700807C14 /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				CC14B7692CB0E0A700807C14 /* AddDetailsView.swift */,
+				CC14B76A2CB0E0A700807C14 /* ButtonsView.swift */,
+			);
+			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
+		CC14B7702CB0E0A700807C14 /* RoutineSetup */ = {
+			isa = PBXGroup;
+			children = (
+				CC14B76B2CB0E0A700807C14 /* DragAndDrop */,
+				CC14B76C2CB0E0A700807C14 /* DayOfWeekView.swift */,
+				CC14B76D2CB0E0A700807C14 /* WeekWorkoutView.swift */,
+				CC14B76E2CB0E0A700807C14 /* WorkoutDropdown.swift */,
+				CC14B76F2CB0E0A700807C14 /* WorkoutTypeView.swift */,
+			);
+			path = RoutineSetup;
+			sourceTree = "<group>";
+		};
+		CC4C57202CB0E14800083E6E /* WorkoutWithABuddy */ = {
+			isa = PBXGroup;
+			children = (
+				CC4C57212CB0E15A00083E6E /* WorkoutWithABuddy */,
+			);
+			path = WorkoutWithABuddy;
+			sourceTree = "<group>";
+		};
+		CC4C57212CB0E15A00083E6E /* WorkoutWithABuddy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WorkoutWithABuddy;
+			sourceTree = SOURCE_ROOT;
+		};
 		CC721A022CB0D32600DA12D5 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,18 +196,6 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		CC721A132CB0DCF400DA12D5 /* Setup */ = {
-			isa = PBXGroup;
-			children = (
-				CC94AE482CA9E9E20091567C /* WeekWorkoutView.swift */,
-				CCB8CEE52CAA095C00D1BA97 /* DayOfWeekView.swift */,
-				CCB8CEF12CAC429500D1BA97 /* WorkoutTypeView.swift */,
-				CCB8CEE92CAA1C1100D1BA97 /* WorkoutDropdown.swift */,
-				CCB8CEFB2CAC5C1E00D1BA97 /* DragAndDrop */,
-			);
-			path = Setup;
-			sourceTree = "<group>";
-		};
 		CC721A142CB0DF7700DA12D5 /* RoutineDisplay */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				CC94ADFE2CA36A270091567C /* WorkoutWithABuddy */,
+				CC4C57202CB0E14800083E6E /* WorkoutWithABuddy */,
 				CC94AE0F2CA36A280091567C /* WorkoutWithABuddyTests */,
 				CC94AE192CA36A280091567C /* WorkoutWithABuddyUITests */,
 				CC94ADFD2CA36A270091567C /* Products */,
@@ -206,10 +231,10 @@
 		CC94ADFE2CA36A270091567C /* WorkoutWithABuddy */ = {
 			isa = PBXGroup;
 			children = (
+				CC14B7702CB0E0A700807C14 /* RoutineSetup */,
 				CC721A022CB0D32600DA12D5 /* Objects */,
 				CCB8CF122CACC90500D1BA97 /* Managers */,
 				CC94AE3D2CA9D3800091567C /* Log-In */,
-				CC721A132CB0DCF400DA12D5 /* Setup */,
 				CC721A142CB0DF7700DA12D5 /* RoutineDisplay */,
 				CCB8CF092CAC958400D1BA97 /* SwiftUiExerciseInput */,
 				CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */,
@@ -265,15 +290,6 @@
 				CC94AE392CA618730091567C /* PythonDbService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		CCB8CEFB2CAC5C1E00D1BA97 /* DragAndDrop */ = {
-			isa = PBXGroup;
-			children = (
-				CCB8CEF32CAC4F1200D1BA97 /* AddDetailsView.swift */,
-				CCB8CF052CAC82A100D1BA97 /* ButtonsView.swift */,
-			);
-			path = DragAndDrop;
 			sourceTree = "<group>";
 		};
 		CCB8CF022CAC7D4B00D1BA97 /* SingleExerciseInput */ = {
@@ -436,20 +452,18 @@
 			files = (
 				CC7219FD2CB098F300DA12D5 /* TimerView.swift in Sources */,
 				CC94AE022CA36A270091567C /* MainTabBarController.swift in Sources */,
-				CCB8CF062CAC82A100D1BA97 /* ButtonsView.swift in Sources */,
-				CCB8CEF42CAC4F1200D1BA97 /* AddDetailsView.swift in Sources */,
+				CC14B7762CB0E0A700807C14 /* WorkoutTypeView.swift in Sources */,
+				CC14B7752CB0E0A700807C14 /* WorkoutDropdown.swift in Sources */,
 				CC721A0A2CB0D47F00DA12D5 /* NotesObject.swift in Sources */,
 				CCB8CF142CACC93D00D1BA97 /* SelectedDayManager.swift in Sources */,
+				CC14B7722CB0E0A700807C14 /* ButtonsView.swift in Sources */,
 				CC94AE342CA4F9D90091567C /* WeightStackViewController.swift in Sources */,
+				CC14B7732CB0E0A700807C14 /* DayOfWeekView.swift in Sources */,
 				CCB8CEF02CAA2BD600D1BA97 /* WorkoutManager.swift in Sources */,
-				CCB8CEF22CAC429500D1BA97 /* WorkoutTypeView.swift in Sources */,
-				CC94AE492CA9E9E20091567C /* WeekWorkoutView.swift in Sources */,
 				CC721A082CB0D45500DA12D5 /* TimeExerciseObject.swift in Sources */,
 				CC721A122CB0DB5700DA12D5 /* ExerciseTypeEnum.swift in Sources */,
-				CCB8CEEA2CAA1C1100D1BA97 /* WorkoutDropdown.swift in Sources */,
 				CC94AE002CA36A270091567C /* WorkoutWithABuddyApp.swift in Sources */,
 				CC94AE452CA9DE780091567C /* UserLoginService.swift in Sources */,
-				CCB8CEE62CAA095C00D1BA97 /* DayOfWeekView.swift in Sources */,
 				CC94AE3C2CA618BC0091567C /* ExerciseObject.swift in Sources */,
 				CCB8CF0F2CACA27700D1BA97 /* DnDTest.swift in Sources */,
 				CCB8CF0D2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift in Sources */,
@@ -469,8 +483,10 @@
 				CC721A012CB0D17100DA12D5 /* WorkoutRoutineManager.swift in Sources */,
 				CCB8CF1B2CAF91C300D1BA97 /* BottomTabView.swift in Sources */,
 				CC721A042CB0D33000DA12D5 /* RoutineObject.swift in Sources */,
+				CC14B7742CB0E0A700807C14 /* WeekWorkoutView.swift in Sources */,
 				CC94AE412CA9D7C80091567C /* CreateUserView.swift in Sources */,
 				CC94AE432CA9DA5F0091567C /* UserObject.swift in Sources */,
+				CC14B7712CB0E0A700807C14 /* AddDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
