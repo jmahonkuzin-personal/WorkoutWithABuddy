@@ -49,6 +49,8 @@
 		CCB8CF172CAE25D600D1BA97 /* TimedExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF162CAE25D600D1BA97 /* TimedExerciseView.swift */; };
 		CCB8CF192CAE329F00D1BA97 /* PrettySymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF182CAE329F00D1BA97 /* PrettySymbolView.swift */; };
 		CCB8CF1B2CAF91C300D1BA97 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8CF1A2CAF91C300D1BA97 /* BottomTabView.swift */; };
+		CCC3278F2CB0E8B50063F696 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3278E2CB0E8B50063F696 /* test.swift */; };
+		CCC327912CB0EA080063F696 /* NumInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC327902CB0EA080063F696 /* NumInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		CCB8CF162CAE25D600D1BA97 /* TimedExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedExerciseView.swift; sourceTree = "<group>"; };
 		CCB8CF182CAE329F00D1BA97 /* PrettySymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettySymbolView.swift; sourceTree = "<group>"; };
 		CCB8CF1A2CAF91C300D1BA97 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		CCC3278E2CB0E8B50063F696 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		CCC327902CB0EA080063F696 /* NumInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,14 +235,14 @@
 		CC94ADFE2CA36A270091567C /* WorkoutWithABuddy */ = {
 			isa = PBXGroup;
 			children = (
+				CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */,
+				CC94AE012CA36A270091567C /* MainTabBarController.swift */,
 				CC14B7702CB0E0A700807C14 /* RoutineSetup */,
 				CC721A022CB0D32600DA12D5 /* Objects */,
 				CCB8CF122CACC90500D1BA97 /* Managers */,
 				CC94AE3D2CA9D3800091567C /* Log-In */,
 				CC721A142CB0DF7700DA12D5 /* RoutineDisplay */,
 				CCB8CF092CAC958400D1BA97 /* SwiftUiExerciseInput */,
-				CC94ADFF2CA36A270091567C /* WorkoutWithABuddyApp.swift */,
-				CC94AE012CA36A270091567C /* MainTabBarController.swift */,
 				CCB8CF022CAC7D4B00D1BA97 /* SingleExerciseInput */,
 				CC94AE472CA9E1450091567C /* Services */,
 				CC94AE032CA36A280091567C /* Assets.xcassets */,
@@ -306,6 +310,8 @@
 			children = (
 				CCB8CF0A2CAC959200D1BA97 /* SwiftUIExerciseInputView.swift */,
 				CCB8CF0C2CAC9B0D00D1BA97 /* WeightUnitPickerView.swift */,
+				CCC3278E2CB0E8B50063F696 /* test.swift */,
+				CCC327902CB0EA080063F696 /* NumInputView.swift */,
 			);
 			path = SwiftUiExerciseInput;
 			sourceTree = "<group>";
@@ -457,8 +463,10 @@
 				CC721A0A2CB0D47F00DA12D5 /* NotesObject.swift in Sources */,
 				CCB8CF142CACC93D00D1BA97 /* SelectedDayManager.swift in Sources */,
 				CC14B7722CB0E0A700807C14 /* ButtonsView.swift in Sources */,
+				CCC3278F2CB0E8B50063F696 /* test.swift in Sources */,
 				CC94AE342CA4F9D90091567C /* WeightStackViewController.swift in Sources */,
 				CC14B7732CB0E0A700807C14 /* DayOfWeekView.swift in Sources */,
+				CCC327912CB0EA080063F696 /* NumInputView.swift in Sources */,
 				CCB8CEF02CAA2BD600D1BA97 /* WorkoutManager.swift in Sources */,
 				CC721A082CB0D45500DA12D5 /* TimeExerciseObject.swift in Sources */,
 				CC721A122CB0DB5700DA12D5 /* ExerciseTypeEnum.swift in Sources */,

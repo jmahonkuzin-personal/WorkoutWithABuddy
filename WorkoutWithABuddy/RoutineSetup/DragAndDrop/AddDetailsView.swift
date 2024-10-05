@@ -34,6 +34,7 @@ struct AddDetailsView: View {
                         Text("\(index + 1)")
                             .bold()
                         HStack(spacing: 5) {
+                            // instead lets do a pop up!
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(.gray)
                                 

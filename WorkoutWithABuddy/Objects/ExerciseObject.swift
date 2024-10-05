@@ -10,13 +10,15 @@ import Foundation
 
 class Exercise: Identifiable, Codable, Equatable {
     var id = UUID()
-    var name: String
+    var name: String = ""
     var weight: Int = 0
     var weightUnit: WeightUnit = WeightUnit.lbs
     var sets: Int = 0
     var repsPerSet: Int = 0
     var time: Int = 0
     var type: ExerciseTypeEnum = ExerciseTypeEnum.rep
+    
+    init() {}
     
     init(name: String, weight: Int, weightUnit: WeightUnit, sets: Int, repsPerSet: Int, time: Int, type: ExerciseTypeEnum) {
         self.name = name

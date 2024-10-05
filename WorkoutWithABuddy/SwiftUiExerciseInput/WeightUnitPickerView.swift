@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WeightUnitPickerView: View {
-    @Binding var selectedWeightUnit: String
+    @Binding var selectedWeightUnit: WeightUnit
     let weightUnits = ["lbs", "kg"]
 
     var body: some View {
@@ -24,11 +24,11 @@ struct WeightUnitPickerView: View {
 }
 
 struct WeightUnitPickerView_ParentView: View {
-    @State private var textInput: String = "lbs"
+    @State private var weightUnit: WeightUnit = WeightUnit.lbs
 
     var body: some View {
         VStack {
-            WeightUnitPickerView(selectedWeightUnit: $textInput)
+            WeightUnitPickerView(selectedWeightUnit: $weightUnit)
         }
     }
 }

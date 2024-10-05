@@ -12,7 +12,7 @@ struct MySwiftUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AddDetailsView(workoutType: WorkoutType.core)
+            NumInputView()
         }
     }
 }
