@@ -1,5 +1,5 @@
 //
-//  UsernamePasswordLogin.swift
+//  LoginView.swift
 //  WorkoutWithABuddy
 //
 //  Created by Julia Mahon Kuzin on 9/29/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UsernamePasswordLogin: View {
+struct LoginView: View {
     @StateObject var userLoginService = UserLoginService()
     
     @State private var username: String = ""
@@ -74,17 +74,6 @@ struct UsernamePasswordLogin: View {
     }
 }
 
-
-// Success screen
-struct SuccessView: View {
-    var body: some View {
-        Text("Login Successful!")
-            .font(.largeTitle)
-            .foregroundColor(.green)
-            .padding()
-    }
-}
-
 // Error screen
 struct ErrorView: View {
     var body: some View {
@@ -96,5 +85,5 @@ struct ErrorView: View {
 }
 
 #Preview {
-    UsernamePasswordLogin()
+    LoginView()
 }
