@@ -13,7 +13,7 @@ struct AddDetailsView: View {
     
     var workoutType: WorkoutType
     
-    @State private var starterExerciseList = [
+    @State private var exerciseList = [
         Exercise(),
         Exercise(),
         Exercise() // maybe change to an Array() impl // need to save this into a larger
@@ -22,41 +22,48 @@ struct AddDetailsView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-                .frame(height: 20)
+//            Spacer()
+//                .frame(height: 20)
             Text("Add workouts for \(workoutType.rawValue) day:")
                 .font(.system(size:28))
                 .bold()
             
             List {
-                ForEach(starterExerciseList.indices, id: \.self) { index in
-                    VStack {
-                        Text("\(index + 1)")
-                            .bold()
-                        HStack(spacing: 5) {
-                            // instead lets do a pop up!
-                            Image(systemName: "line.3.horizontal")
-                                .foregroundColor(.gray)
-                                
-                            SwiftUIExerciseInputView(
-                                exercise: $starterExerciseList[index]
-                            )
-                            Spacer()
-                            Button(action: {
-                                removeItem(at: index)
-                            }) {
-                                Image(systemName: "xmark.circle")
-                                    .foregroundColor(.red)
-                            }
-                        }
-                    }
+                ForEach(exerciseList.indices, id: \.self) { index in
+                    HStack {
+                    SingleExerciseInputView(
+                        exercise: $exerciseList[index]
+                    )
+//                    HStack {
+//                        SwiftUIExerciseInputView(
+//                            exercise: $exerciseList[index]
+//                        )
+                        
+//                        Text("\(index + 1)")
+//                            .bold()
+//                            .frame(width: 20, height: 30)
+//                            .background(Color.gray.opacity(0.2))
+//                            .clipShape(.capsule)
+//                        
+//                        SwiftUIExerciseInputView(
+//                            exercise: $exerciseList[index]
+//                        )
+//                        Button(action: {
+//                            removeItem(at: index)
+//                        }) {
+//                            Image(systemName: "xmark.circle")
+//                                .foregroundColor(.red)
+//                        }
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundColor(.gray)
+                    }.listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 }
                 .onMove(perform: move)
+                .onDelete(perform: delete)  // Enable swipe to delete
             }
-            .listStyle(PlainListStyle())
+            .listStyle(.plain)
             .listRowSpacing(5)
             .scrollContentBackground(.hidden)
-            
             
             Button(action: {
                 addEmptyExerciseItem()
@@ -70,21 +77,27 @@ struct AddDetailsView: View {
             Spacer()
                 .frame(height: 40)
             
-            ButtonsView()
+            ButtonsView(
+                exerciseList: $exerciseList
+            )
         }
         .background(.gray)
     }
     
     func move(from source: IndexSet, to destination: Int) {
-        starterExerciseList.move(fromOffsets: source, toOffset: destination)
+        exerciseList.move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func delete(at offsets: IndexSet) {
+        exerciseList.remove(atOffsets: offsets)
     }
     
     func addEmptyExerciseItem() {
-        starterExerciseList.append(Exercise())
+        exerciseList.append(Exercise())
     }
     
     func removeItem(at index: Int) {
-        starterExerciseList.remove(at: index)
+        exerciseList.remove(at: index)
     }
 }
 

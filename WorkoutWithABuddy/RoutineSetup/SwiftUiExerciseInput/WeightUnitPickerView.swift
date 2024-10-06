@@ -9,13 +9,12 @@ import SwiftUI
 
 struct WeightUnitPickerView: View {
     @Binding var selectedWeightUnit: WeightUnit
-    let weightUnits = ["lbs", "kg"]
 
     var body: some View {
         VStack {
             Picker("Options", selection: $selectedWeightUnit) {
-                ForEach(weightUnits, id: \.self) { weightUnit in
-                    Text(weightUnit).tag(weightUnit)
+                ForEach(WeightUnit.allCases, id: \.self) { unit in
+                    Text(unit.rawValue).tag(unit)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -24,7 +23,7 @@ struct WeightUnitPickerView: View {
 }
 
 struct WeightUnitPickerView_ParentView: View {
-    @State private var weightUnit: WeightUnit = WeightUnit.lbs
+    @State private var weightUnit: WeightUnit = WeightUnit.pounds
 
     var body: some View {
         VStack {

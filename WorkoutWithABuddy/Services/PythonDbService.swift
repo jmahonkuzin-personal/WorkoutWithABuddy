@@ -9,13 +9,14 @@ import Foundation
 
 
 class PythonDbService: ObservableObject {
-    
     // A published property to hold the response data
     @Published var responseData: String = ""
+    @Published var isErrored: Bool = false
+    @Published var isSuccess: Bool = false
     
-    func saveExercise(exercise: Exercise) {
+    func saveExercises(exercises: [Exercise]) {
         // URL of the Python server endpoint (replace with your server's URL)
-        guard let url = URL(string: "http://127.0.0.1:5000/add_exercise") else {
+        guard let url = URL(string: "http://127.0.0.1:5000/add_exercises") else {
             print("Invalid URL")
             return
         }
@@ -27,10 +28,11 @@ class PythonDbService: ObservableObject {
         
         // Encode the exercise data to JSON
         do {
-            let jsonData = try JSONEncoder().encode(exercise)
+            let jsonData = try JSONEncoder().encode(exercises)
             request.httpBody = jsonData
         } catch {
             print("Failed to encode exercise data: \(error)")
+            self.isErrored = true
             return
         }
         
@@ -41,6 +43,7 @@ class PythonDbService: ObservableObject {
                 DispatchQueue.main.async {
                     self.responseData = "Error: \(error.localizedDescription)"
                 }
+                self.isErrored = true
                 return
             }
             
@@ -49,10 +52,12 @@ class PythonDbService: ObservableObject {
                 DispatchQueue.main.async {
                     self.responseData = responseString
                 }
+                self.isSuccess = true
             } else {
                 DispatchQueue.main.async {
                     self.responseData = "No data or invalid response"
                 }
+                self.isErrored = true
             }
         }
         
