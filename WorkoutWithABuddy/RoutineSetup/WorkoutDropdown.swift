@@ -1,5 +1,5 @@
 //
-//  WorkoutDropdown.swift
+//  RoutineDropdownView.swift
 //  WorkoutWithABuddy
 //
 //  Created by Julia Mahon Kuzin on 9/29/24.
@@ -7,50 +7,26 @@
 
 import SwiftUI
 
-struct WorkoutDropdownView: View {
-    var selectedDayOfWeek: String
+struct RoutineDropdownView: View {
+    @ObservedObject var weeklyRoutineManager: WeeklyRoutineManager
+    var day: String
+    @State private var selectedRoutine: WorkoutRoutineType
     
-    // Use the WorkoutManager to manage the list of workouts
-    @ObservedObject var workoutManager: WorkoutManager
+    init(manager: WeeklyRoutineManager) {
+        self.weeklyRoutineManager = manager
+        self.day = manager.selectedDay ?? ""
+        _selectedRoutine = State(initialValue: manager.routines[day] ?? WorkoutRoutineType.rest)
+    }
     
     var body: some View {
-        VStack {
-            let workoutOptions = WorkoutType.allCases
-            Picker("Select workout", selection: Binding(
-                get: {
-                    workoutManager.getWorkout(forDay: selectedDayOfWeek)
-                },
-                set: {
-                    selectedWorkoutType in
-                    workoutManager.updateWorkout(forDay: selectedDayOfWeek, withWorkout: selectedWorkoutType)
-                }
-            ))
-            {
-                ForEach(workoutOptions) { workoutType in
-                    HStack(spacing: 103) { // spacing not working
-                        Image(systemName: workoutType.icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 30)
-                        Spacer()
-                        Text(workoutType.id)
-                            .padding(.leading, 30)
-                    }
-                    .padding(.vertical, 10)
-                    .tag(workoutType)
-                }
+        Picker("Select an option", selection: $selectedRoutine) {
+            ForEach(WorkoutRoutineType.allCases) { type in
+                Text(type.rawValue)
             }
-            .pickerStyle(MenuPickerStyle())
-//            .padding()
-            .frame(width: 200, height: 40)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(8)
         }
-    }
-}
-
-struct WorkoutDropdownView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutDropdownView(selectedDayOfWeek: "Monday", workoutManager: WorkoutManager())
+        .pickerStyle(.menu)
+        .onChange(of: selectedRoutine) { newValue, oldValue in
+            weeklyRoutineManager.updateRoutine(for: day, with: newValue)
+        }
     }
 }

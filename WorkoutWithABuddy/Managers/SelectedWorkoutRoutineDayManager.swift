@@ -8,6 +8,6 @@
 import Foundation
 
 
-class SelectedDayManager: ObservableObject {
-    @Published var selectedDay: WorkoutDay? = nil
-}
+//class SelectedWorkoutRoutineDayManager: ObservableObject {
+//    @Published var selectedDay: WorkoutRoutineDay? = nil
+//}

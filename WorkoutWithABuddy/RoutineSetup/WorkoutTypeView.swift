@@ -12,21 +12,21 @@ import SwiftUI
 
 // The view that holds the day name and icon
 struct WorkoutTypeView: View {
-    var dayOfWeek: String
+    var day: String
     
-    @ObservedObject var workoutManager: WorkoutManager
+    @ObservedObject var manager: WeeklyRoutineManager
     
     // Day name in a rectangle above
     var body: some View {
         VStack {
-            let currentWorkoutForSelectedDay = workoutManager.getWorkout(forDay: dayOfWeek)
-            let icon = currentWorkoutForSelectedDay.icon
+            let curWorkoutRoutine = manager.routines[day] ?? WorkoutRoutineType.rest
+            let icon = curWorkoutRoutine.icon
             Image(systemName: icon)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 30, height: 30)
                 .foregroundColor(.pink)
-            Text(currentWorkoutForSelectedDay.id)
+            Text(curWorkoutRoutine.id)
         }
     }
 }

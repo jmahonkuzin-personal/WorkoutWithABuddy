@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum WorkoutType: String, CaseIterable, Identifiable {
+enum WorkoutRoutineType: String, CaseIterable, Identifiable {
     case core = "Core"
     case push = "Push"
     case pull = "Pull"

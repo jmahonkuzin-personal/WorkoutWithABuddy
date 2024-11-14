@@ -11,7 +11,7 @@ import SwiftUI
 
 struct AddDetailsView: View {
     
-    var workoutType: WorkoutType
+    var workoutType: WorkoutRoutineType
     
     @State private var exerciseList = [
         Exercise(),
@@ -103,6 +103,6 @@ struct AddDetailsView: View {
 
 struct AddDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddDetailsView(workoutType: WorkoutType.push)
+        AddDetailsView(workoutType: WorkoutRoutineType.push)
     }
 }

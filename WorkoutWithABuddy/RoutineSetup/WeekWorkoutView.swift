@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct WeekWorkoutView: View {
-    @StateObject var workoutManager = WorkoutManager()
-    @StateObject var selectedDayManager = SelectedDayManager()
+    @StateObject var weeklyRoutineManager = WeeklyRoutineManager()
     
     var body: some View {
         NavigationView {
@@ -23,38 +22,23 @@ struct WeekWorkoutView: View {
                     .font(.title)
                     .fontWeight(.bold)
                 
-                GeometryReader { geometry in
-                    let screenWidth = geometry.size.width
-                    let numOfDaysInAWeek = 7
-                    let boxWidth = screenWidth / CGFloat(numOfDaysInAWeek) - 10
-                    
-                    HStack(alignment: .top, spacing: 4) {
-                        ForEach(workoutManager.workouts) { workoutDay in
-                            DayOfWeekView(day: workoutDay, boxWidth: boxWidth, selectedDayManager: selectedDayManager,
-                                          workoutManager: workoutManager) // maybe we don't need to send in the whole manager, but for now, lets
-                        }
-                    }
-                    .frame(maxWidth: screenWidth)
-                    .padding(.horizontal, (geometry.size.width - (boxWidth * CGFloat(numOfDaysInAWeek) + CGFloat(10 * (numOfDaysInAWeek - 1)))) / 2)
-                    .position(x: geometry.size.width / 2, y: 120) // Set a fixed position for the week view
-                }
-                .frame(height: 40) // overall height of the view
+                WeekViewWithRoutineTypeView(routineManager: weeklyRoutineManager)
                 
-                Spacer()
-                    .frame(height: 180)// Adds space between week view and text below
+                let routines = weeklyRoutineManager.routines
                 
                 // Text displaying the selected day
-                if let selectedWorkoutDay = selectedDayManager.selectedDay {
-                    let dayOfWeek = selectedWorkoutDay.dayOfWeek
-                    WorkoutDropdownView(selectedDayOfWeek: dayOfWeek, workoutManager: workoutManager)
-                    let selectedExercise = workoutManager.getWorkout(forDay: dayOfWeek)
-                    if selectedExercise != WorkoutType.rest {
+                if let testForNil = weeklyRoutineManager.selectedDay {
+                    let selectedRoutineType = routines[testForNil] ?? WorkoutRoutineType.rest
+
+                    RoutineDropdownView(manager: weeklyRoutineManager)
+                    
+                    if selectedRoutineType != WorkoutRoutineType.rest {
                         NavigationLink(destination: AddDetailsView(
-                            workoutType: workoutManager.getWorkout(forDay: selectedWorkoutDay.dayOfWeek)
+                            workoutType: selectedRoutineType
                         )
                             .navigationBarBackButtonHidden(true)
                         ) {
-                            Text("Add exercises to your \(selectedExercise.id) day")
+                            Text("Add exercises to your \(selectedRoutineType.id) day")
                                 .foregroundColor(.blue)
                                 .padding(.top, 5)
                         }
@@ -62,7 +46,7 @@ struct WeekWorkoutView: View {
                     }
                 } else {
                     Text("Select a day")
-                        .font(.title3)
+                        .font(.system(size:30))
                         .foregroundColor(.gray)
                         .padding(.top, 10)
                 }

@@ -14,7 +14,9 @@ struct WeightUnitPickerView: View {
         VStack {
             Picker("Options", selection: $selectedWeightUnit) {
                 ForEach(WeightUnit.allCases, id: \.self) { unit in
-                    Text(unit.rawValue).tag(unit)
+                    Text(unit.rawValue)
+                        .font(.title)
+                        .tag(unit)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
